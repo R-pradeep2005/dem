@@ -1,0 +1,12 @@
+{
+  "name": "storytelling_ai_backend",
+  "version": "1.0.0",
+  "description": "backend for story telling ai",
+  "main": "index.js",
+  "scripts": {
+    "start": " node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cse 5b",
+  "license": "ISC"
+}
