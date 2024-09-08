@@ -4,9 +4,15 @@
   "description": "backend for story telling ai",
   "main": "index.js",
   "scripts": {
-    "start": " node index.js",
+    "start": " nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "cse 5b",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "json": "^11.0.0",
+    "nodemon": "^3.1.4"
+  }
 }

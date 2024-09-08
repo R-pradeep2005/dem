@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Page</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #894918;
+    overscroll-behavior-y: none;
+    overscroll-behavior-x: none;
+}
+
+.header {
+    background-image: url('header-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 270px;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    mask-image: linear-gradient(to bottom, rgba(150, 145, 145, 0.959), rgba(130, 130, 130, 0.215)) ;   
+    z-index: 0;
+
+    padding: 80px;
+}
+.blur-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            backdrop-filter: blur(5px);
+            z-index: 0;
+        }
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #000;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.title h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.header-text {
+    max-width: 700px;
+    margin-left: 10%;
+    color: rgb(212, 212, 212);
+    position: relative;
+    z-index: 2;
+}
+
+.header-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.story-section {
+    padding: 40px 20px;
+    
+    background-color: #fff;
+    margin:100px ;
+    margin-left: 28%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.story-content{
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.story-content .dropcap {
+    font-size: 48px;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    line-height: 1;
+    color: #000;
+}
+
+.back-to-top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.back-to-top a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    display: inline-block;
+}
+
+.back-to-top a:hover {
+    background-color: #c2c2c2;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="blur-overlay"></div>
+        <div class="back-btn">
+            <span>&#8592;</span>
+        </div>
+        <div class="title">
+            <h1>Serif</h1>
+        </div>
+        <div class="header-text">
+            <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+            </p>
+        </div>
+    </header>
+    
+    <section class="story-section">
+        <div class="story-content" id="story-content">
+            
+        </div>
+    </section>
+
+    <div class="back-to-top">
+        <a href="#">back to top</a>
+    </div>
+    <script>
+        const text = `Once upon a time in the ancient city of Roma, long before the digital age, there existed a thriving community of artisans who were masterful in the art of lettering. These artisans were tasked with inscribing the great proclamations and edicts of the empire onto stone tablets and monuments. Each letter they carved was a work of art, intended to convey both the authority of the message and the beauty of the language.
+
+
+One day, a young artisan named Marcus was entrusted with a particularly important task. The Emperor had ordered a grand inscription to be carved at the entrance of the newly built temple of Jupiter, a monument that would stand for centuries. 
+
+
+Marcus knew that this inscription had to be perfect, as it would be seen by all who entered the temple.
+As Marcus chiseled away at the stone, he noticed something interesting. When he finished the vertical and horizontal strokes of each letter, the ends of the letters appeared a bit rough and unfinished. This bothered Marcus greatly, as he wanted the inscription to be as elegant as possible.
+
+
+Inspired by the graceful curves of the columns and arches around him, Marcus decided to add small finishing strokes to the ends of each letter, giving them a polished and complete look. These finishing strokes were delicate, extending slightly beyond.`;
+
+    const typingSpeed = 10; 
+    let index = 0;
+
+    function typeText() {
+        const container = document.getElementById('story-content');
+
+        if (index < text.length) {
+            container.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeText, typingSpeed); 
+        }
+    }
+
+    
+    window.onload = function() {
+        typeText();
+    };
+    </script>
+</body>
+</html>
