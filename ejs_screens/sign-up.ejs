@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #3e3e3e;
+      font-family: Arial, sans-serif;
+    }
+
+    .form-container {
+      background-color: white;
+      width: 40%;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .form-header {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .form-header button {
+      width: 50%;
+      padding: 10px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form-header .signup-btn {
+      background-color: black;
+      color: white;
+    }
+
+    .form-header .login-btn {
+      background-color: lightgray;
+      color: black;
+    }
+
+    .form-header button:hover {
+      opacity: 0.9;
+    }
+
+    h2 {
+      margin: 20px 0;
+    }
+
+    .or-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .or-divider hr {
+      width: 40%;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+
+    .or-divider span {
+      margin: 0 10px;
+      color: #777;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .sign-in_txt{
+      color: #5f5f5f;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    button[type="submit"]:hover {
+      opacity: 0.9;
+    }
+    @media (max-width:800px) {
+      .form-container {
+      background-color: white;
+      width: 65%;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+      
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <div class="form-header">
+      <button class="signup-btn">Sign up</button>
+      <button onclick="Nav()" class="login-btn">Log in</button>
+    </div>
+
+    <h2>Sign up</h2>
+
+    <div class="or-divider">
+      <hr>
+      <span>OR</span>
+      <hr>
+    </div>
+
+    <form action="./main_page.html" method="POST">
+      <div>
+        <input type="text" placeholder="First name" required>
+        <input type="text" placeholder="Last name"  >
+      </div>
+      <input type="email" placeholder="Email address" required>
+      <input type="password" placeholder="Create password" required>
+      <input type="password" placeholder="Retype password" required>
+      <div onclick="Nav()" class="sign-in_txt">
+        already have an account ? sign-in
+      </div>
+      <button type="submit">Sign up</button>
+    </form>
+    
+  </div>
+  <script>
+    function Nav(){
+      window.location.href='/'
+    }
+  </script>
+
+</body>
+</html>
