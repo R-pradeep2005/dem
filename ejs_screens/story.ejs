@@ -19,7 +19,7 @@ body {
 }
 
 .header {
-    background-image: url('header-background.jpg');
+    background-image: url('./images/header-background.jpg');
     background-size: cover;
     background-position: center;
     height: 270px;
@@ -46,8 +46,8 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    color: #000;
-    font-size: 30px;
+    color: #ffffff;
+    font-size: 40px;
     cursor: pointer;
 }
 
@@ -116,17 +116,48 @@ body {
 .back-to-top a:hover {
     background-color: #c2c2c2;
 }
+@media (max-width:800px) {
+    
+.header-text {
+    width: 100%;
+    margin-left: 10%;
+    color: rgb(212, 212, 212);
+    position: relative;
+    z-index: 2;
+}
+.header-text p {
+    width: 100%;
+    margin-left: 5%;
+    color: rgb(212, 212, 212);
+    position: relative;
+    z-index: 2;
+}   
+.story-section {
+    background-color: #fff;
+    width: 90%;
+    margin:100px ;
+    margin-left: 5%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.title h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+}
 
     </style>
 </head>
 <body>
     <header class="header">
         <div class="blur-overlay"></div>
-        <div class="back-btn">
-            <span>&#8592;</span>
+        <div onclick="window.history.back()" class="back-btn">
+            <span>&larr;</span>
         </div>
         <div class="title">
-            <h1>Serif</h1>
+            <h1>A farmer</h1>
         </div>
         <div class="header-text">
             <p>
@@ -157,7 +188,7 @@ As Marcus chiseled away at the stone, he noticed something interesting. When he 
 
 Inspired by the graceful curves of the columns and arches around him, Marcus decided to add small finishing strokes to the ends of each letter, giving them a polished and complete look. These finishing strokes were delicate, extending slightly beyond.`;
 
-    const typingSpeed = 10; 
+    const typingSpeed = 5; 
     let index = 0;
 
     function typeText() {

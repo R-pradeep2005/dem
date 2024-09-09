@@ -132,20 +132,10 @@ body {
     font-size: 20px;
     margin-left: 5px;
 }
-.overlay.poped{
-    position: fixed;
-    top: 0;
-    left: 0;
-    visibility: visible;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .overlay {
     position: fixed;
+    color: #000;
     top: 0;
     left: 0;
     visibility: hidden;
@@ -260,41 +250,90 @@ h2 {
     color: #000;
     border: 2px solid #ccc;
 }
+@media (max-width:800px) {
+#profile_container{
+    height: 10%;
+    padding: 3%;
+
+}
+h2 {
+    font-size: 18px;
+    margin-bottom: 3%;
+    margin-left: 20px;
+    margin-top: 3%;
+}
+.profile-img {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    margin-bottom: 0%;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 0%;
+}
+.profile-name {
+    margin: 2%;
+    font-size: 24px;
+    font-weight: bold;
+}
+.stories-grid {
+    display: grid;
+    grid-row:2;
+    
+}
+.modal {
+  
+    width: 90%;
+   
+}
+.options1 {
+    
+    width: 90%;
+    
+}
+
+
+    
+}
 
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="profile_container">
         <div class="profile">
-            <div class="profile-header">
-                <img src="profile-pic.jpg" alt="Profile Picture" class="profile-img">
-                <h2 class="profile-name">Jhon</h2>
+            
+                <img src="./images/profile-pic.jpg" alt="Profile Picture" class="profile-img">
+                <h2 class="profile-name">John</h2>
                 <p class="profile-email">example@gmail.com</p>
-            </div>
+            
         </div>
     </div>
     <div class="container">
-        <div class="stories-section"></div>
             <h2>Stories</h2>
             <div class="stories-grid">
                 <div onclick="Nav()" class="story-card">
-                    <img src="farmer.jpg" alt="A Farmer" class="story-img">
+                    <img src="./images/farmer.jpg" alt="A Farmer" class="story-img">
                     <div class="story-info">
                         <h3>A Farmer</h3>
                         <p>170 pages</p>
                         <p>19/07/2022</p>
                     </div>
                 </div>
-                <div class="story-card">
-                    <img src="lion.jpg" alt="Foolish Lion" class="story-img">
+                <div onclick="Nav()" class="story-card">
+                    <img src="./images/lion.jpg" alt="Foolish Lion" class="story-img">
                     <div class="story-info">
                         <h3>Foolish Lion</h3>
                         <p>110 pages</p>
                         <p>18/07/2022</p>
                     </div>
                 </div>
-                <div class="story-card">
-                    <img src="lake.jpg" alt="A Lake" class="story-img">
+                <div onclick="Nav()" class="story-card">
+                    <img src="./images/lake.jpg" alt="A Lake" class="story-img">
                     <div class="story-info">
                         <h3>A Lake</h3>
                         <p>170 pages</p>
@@ -326,7 +365,7 @@ h2 {
             </div>
 
             <div class="action-buttons">
-                <button class="create-btn"></button>
+                <button class="create-btn">create</button>
                 <button onclick="Pop_up(0)" class="cancel-btn">Cancel</button>
             </div>
         </div>
@@ -362,10 +401,7 @@ h2 {
             }
             }
         function Nav(){
-            fetch("./story.html").then(()=>{
-                console.log("success");
-                
-            })
+            window.location.href='./story'
         }
         
         </script>
