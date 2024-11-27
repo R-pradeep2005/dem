@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path')
 const app = express();
 
-// Middleware
+// Middleware hello
 app.use(express.static(path.join(__dirname,'public'))) 
 
 app.set('view engine' ,'ejs');
